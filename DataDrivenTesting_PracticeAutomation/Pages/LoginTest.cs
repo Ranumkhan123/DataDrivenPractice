@@ -23,7 +23,7 @@ namespace DataDrivenTesting_PracticeAutomation.Pages
 
 
 
-        public void DataDrivenLogin(string url, string enterUN, string enterPW)
+        public void Login(string url, string enterUN, string enterPW)
         {
             IJavaScriptExecutor scroll = (IJavaScriptExecutor)driver;
             //Action Actions = new Action(driver);
@@ -50,6 +50,12 @@ namespace DataDrivenTesting_PracticeAutomation.Pages
             driver.FindElement(username).SendKeys(enterUN);
             //enter password
             driver.FindElement(password).SendKeys(enterPW);
+
+            //print the username and password
+            Console.WriteLine("Username: " + enterUN);
+            Console.WriteLine("Password: " + enterPW);
+            Console.WriteLine();
+
 
             //wait login button
             var waituntilloginbtn = new WebDriverWait(driver, TimeSpan.FromSeconds(5));

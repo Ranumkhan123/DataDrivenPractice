@@ -51,6 +51,12 @@ namespace DataDrivenTesting_PracticeAutomation.Pages
             //enter password
             driver.FindElement(password).SendKeys(enterPW);
 
+
+            //print the username and password
+            Console.WriteLine("Username: " + enterUN);
+            Console.WriteLine("Password: " + enterPW);
+            Console.WriteLine();
+
             //wait login button
             var waituntilloginbtn = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
             waituntilloginbtn.Until(ExpectedConditions.ElementIsVisible(loginbutton));

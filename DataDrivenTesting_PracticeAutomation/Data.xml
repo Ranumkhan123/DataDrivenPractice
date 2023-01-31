@@ -1,19 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Automation>
 	<Execution>
+		//pass
 		<DataDrivenLoginTestCase02>
 			<enterUsername>standard_user</enterUsername> 
 			<enterPassword>secret_sauce</enterPassword>
 		</DataDrivenLoginTestCase02>
 
+		//fail
 		<DataDrivenLoginTestCase02>
-			<enterUN>standard_user</enterUN> 
-			<enterPW>123</enterPW>
+			<enterUsername>standard_user</enterUsername>
+			<enterPassword>123</enterPassword>
 		</DataDrivenLoginTestCase02>
-	
-	<DataDrivenLoginTestCase02>
-			<enterUN>standard_user</enterUN>
-			<enterPW>secret_sauce</enterPW>
+
+
+		//pass
+		<DataDrivenLoginTestCase02>
+			<enterUsername>standard_user</enterUsername>
+			<enterPassword>secret_sauce</enterPassword>
 		</DataDrivenLoginTestCase02>
 	
 	</Execution>

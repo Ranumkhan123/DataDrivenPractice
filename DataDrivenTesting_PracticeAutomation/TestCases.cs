@@ -7,8 +7,9 @@ namespace DataDrivenTesting_PracticeAutomation
     [TestClass]
     public class TestCases : CorePage
     {
-        LoginTest ddlogin = new LoginTest();
+        LoginTest login = new LoginTest();
         DataDrivenLogin logindd = new DataDrivenLogin();
+      
 
       
             #region Setups and Cleanups
@@ -55,9 +56,12 @@ namespace DataDrivenTesting_PracticeAutomation
 
         [TestMethod]
       
-        public void DataDrivenLoginTestCase01()
+        public void TestCase01()
         {
-            ddlogin.DataDrivenLogin("https://www.saucedemo.com/", "standard_user", "secret_sauce");
+            login.Login("https://www.saucedemo.com/", "standard_user", "secret_sauce");
+          
+        
+        
         }
 
         [TestMethod]
@@ -69,6 +73,7 @@ namespace DataDrivenTesting_PracticeAutomation
             string enterPW = TestContext.DataRow["enterPassword"].ToString();
 
             logindd.LoginDD("https://www.saucedemo.com/", enterUN, enterPW);
+
         }
 
 
