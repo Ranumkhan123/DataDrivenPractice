@@ -54,20 +54,21 @@ namespace DataDrivenTesting_PracticeAutomation
 
 
         [TestMethod]
-       
+      
         public void DataDrivenLoginTestCase01()
         {
             ddlogin.DataDrivenLogin("https://www.saucedemo.com/", "standard_user", "secret_sauce");
         }
 
         [TestMethod]
-        [DataSource("Microsoft.VisualStudio.TestTools.DataSource.XML", "@Data.xml", "DataDrivenLogin", DataAccessMethod.Sequential)]
+
+        [DataSource("Microsoft.VisualStudio.TestTools.DataSource.XML", "Data.xml", "DataDrivenLoginTestCase02", DataAccessMethod.Sequential)]
         public void DataDrivenLoginTestCase02()
         {
             string enterUN = TestContext.DataRow["enterUsername"].ToString();
             string enterPW = TestContext.DataRow["enterPassword"].ToString();
 
-            logindd.LoginDD("https://www.saucedemo.com/", "enterUN", "enterPW");
+            logindd.LoginDD("https://www.saucedemo.com/", enterUN, enterPW);
         }
 
 

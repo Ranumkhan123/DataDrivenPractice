@@ -58,12 +58,14 @@ namespace DataDrivenTesting_PracticeAutomation.Pages
             //click login button
             driver.FindElement(loginbutton).Click();
 
+          
             // wait login button
             var waituntilpageloads = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
             waituntilpageloads.Until(ExpectedConditions.UrlContains("inventory.html"));
 
             //Assert successfully logged in
             Assert.IsTrue(driver.Url.Contains("inventory.html"));
+
 
         }
 
