@@ -61,7 +61,7 @@ namespace DataDrivenTesting_PracticeAutomation
         }
 
         [TestMethod]
-        // [DataSource("Microsoft.VisualStudio.TestTools.DataSource.XML", "@Data.xml", "DataDrivenLogin", DataAccessMethod.Sequential)]
+        [DataSource("Microsoft.VisualStudio.TestTools.DataSource.XML", "@Data.xml", "DataDrivenLogin", DataAccessMethod.Sequential)]
         public void DataDrivenLoginTestCase02()
         {
             string enterUN = TestContext.DataRow["enterUsername"].ToString();
