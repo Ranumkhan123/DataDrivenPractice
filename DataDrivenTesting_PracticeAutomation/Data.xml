@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Automation>
+	<Execution>
+		<DataDrivenLoginTestCase02>
+			<enterUsername>standard_user</enterUsername>
+			<enterPassword>secret_sauce</enterPassword>
+		</DataDrivenLoginTestCase02>
+
+		<DataDrivenLoginTestCase02>
+			<enterUN>admin</enterUN>
+			<enterPW>123</enterPW>
+		</DataDrivenLoginTestCase02>
+	</Execution>
+</Automation>
